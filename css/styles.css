@@ -13,9 +13,10 @@ font-family: 'Roboto', sans-serif; */
   --additional-bgc-color: #f5f4fa;
   --button-bgc: #f5f4fa;
   --footer-bgc: #2f303a;
-  --hero-bgc: #2f303a;
+  --hero-bgc: #c4c4c4;
   --header-border-color: #ececec;
   --border-color: #eeeeee;
+  --icon-color: #AFB1B8;
 }
 
 /* BODY */
@@ -150,6 +151,20 @@ ol {
   margin-left: auto;
 }
 
+.contacts-item-link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contacts-icon:hover {
+  color: var(--accent-color);
+}
+
 .contacts-item + .contacts-item,
 .nav-item + .nav-item {
   margin-left: 50px;
@@ -158,15 +173,17 @@ ol {
 /* INDEX.HTML */
 
 /* HERO */
-.hero {
-  background-color: var(--hero-bgc);
-}
 
 .hero-section {
   padding-top: 200px;
   padding-bottom: 200px;
   min-height: 600px;
   text-align: center;
+  background-color: var(--hero-bgc);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -186,6 +203,7 @@ ol {
   padding: 10px 32px;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 
   font-family: inherit;
   font-weight: 700;
@@ -220,6 +238,17 @@ ol {
 
 .benefits-item {
   width: 270px;
+}
+
+.benefits-icon-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: var(--additional-bgc-color);
 }
 
 .header-second {
@@ -292,7 +321,6 @@ ol {
 
 .team-box {
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .team-list-item + .team-list-item {
@@ -314,6 +342,44 @@ ol {
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.team-links {
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 16px 32px 30px;
+}
+
+.team-links-item + .team-links-item {
+  margin-left: 10px;
+}
+.team-icon {
+  fill: var(--icon-color);
+}
+
+.team-icon:hover,
+.team-icon:focus {
+  fill: var(--additional-color-text);
+}
+
+.team-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.team-links-item {
+  width: 44px;
+  height: 44px;
+}
+
+.team-link:hover,
+.team-link:focus {
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  fill: var(--additional-color-text);
 }
 
 /* PORTFOLIO.HTML */

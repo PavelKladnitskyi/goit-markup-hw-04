@@ -182,6 +182,9 @@ ol {
   background-color: var(--hero-bgc);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -319,6 +322,7 @@ ol {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  padding-bottom: 30px;
 }
 
 .team-box {
@@ -348,8 +352,8 @@ ol {
 
 .team-links {
   display: flex;
-  /* justify-content: space-between; */
-  padding: 16px 32px 30px;
+  justify-content: center;
+  margin-top: 16px;
 }
 
 .team-links-item + .team-links-item,
@@ -402,11 +406,12 @@ ol {
 }
 
 .clients-item {
+  display: flex;
+  justify-content: center;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
 }
 
 .clients-item:hover,
@@ -423,8 +428,8 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 106px;
-  height: 60px;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -492,11 +497,18 @@ ol {
   flex-basis: calc(100% / 3 - 30px);
 }
 
-.works-list-item:hover,
-.works-list-item:focus {
+.works-list-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.works-list-link:hover,
+.works-list-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .works-list-desc {
   padding: 20px 24px;
   border-left: 1px solid var(--border-color);
@@ -568,9 +580,9 @@ ol {
 
 .footer-box {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-soc-media {
   margin-left: 70px;
-  padding-top: 12px;
 }

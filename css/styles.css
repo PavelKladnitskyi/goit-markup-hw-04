@@ -412,7 +412,6 @@ ol {
   width: 170px;
   height: 92px;
 
-  color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
 }
